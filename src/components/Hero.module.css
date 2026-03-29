@@ -136,3 +136,38 @@
   height: 60px;
   background-color: var(--color-white);
 }
+
+@media (max-width: 900px) {
+  .title {
+    font-size: clamp(3rem, 18vw, 6rem);
+    letter-spacing: -2px;
+  }
+  
+  .hashtag {
+    display: none; /* Prevent overlap with main content */
+  }
+  
+  .rotatingBadge {
+    right: 40px;
+    bottom: 40px;
+    width: 120px;
+    height: 120px;
+  }
+  
+  .heroActions {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .primaryBtn, .secondaryBtn {
+    width: 100%;
+    max-width: 280px;
+    padding: 15px 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .rotatingBadge {
+    display: none; /* Too cluttered on mobile */
+  }
+}

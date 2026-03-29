@@ -147,8 +147,32 @@
     width: 200px;
   }
 }
+
 @media (max-width: 768px) {
+  .topNav {
+    padding: 0 20px;
+    height: 70px;
+  }
+  
   .searchBar {
     display: none;
+  }
+  
+  .right {
+    gap: 20px;
+  }
+  
+  .actions {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  .badgeInfo {
+    display: none;
+  }
+  
+  .adminBadge {
+    padding: 5px;
   }
 }

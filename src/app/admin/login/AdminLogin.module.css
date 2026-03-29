@@ -195,6 +195,48 @@
 
 @media (max-width: 600px) {
   .loginCard {
-    padding: 40px 25px;
+    padding: 30px 20px;
+    border-radius: 20px;
+  }
+  
+  .header h2 {
+    font-size: 1.6rem;
+  }
+  
+  .header p {
+    font-size: 0.8rem;
+    margin-bottom: 25px;
+  }
+  
+  .iconCircle {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+  }
+  
+  .backHome {
+    top: 20px;
+    left: 20px;
+    font-size: 0.7rem;
+  }
+  
+  .bgGlow {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .submitBtn {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-height: 700px) {
+  .container {
+    padding: 20px;
+    align-items: flex-start;
+  }
+  .loginCard {
+    margin-top: 40px;
   }
 }

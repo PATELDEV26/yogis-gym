@@ -49,4 +49,16 @@
     width: 56px;
     height: 56px;
   }
+  .tooltip {
+    display: none; /* Tooltips are not useful on mobile tap */
+  }
+}
+
+@media (max-width: 480px) {
+  .whatsappButton {
+    bottom: 1rem;
+    right: 1rem;
+    width: 48px;
+    height: 48px;
+  }
 }

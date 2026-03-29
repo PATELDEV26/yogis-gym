@@ -288,7 +288,66 @@
 }
 
 @media (max-width: 900px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+  
   .bottomGrid {
     grid-template-columns: 1fr;
+  }
+  
+  .actionCenter {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .statCard {
+    padding: 20px;
+    gap: 15px;
+  }
+  
+  .statIcon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .statValue {
+    font-size: 1.8rem;
+  }
+  
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .actionsGrid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .actionButton {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.6rem;
+  }
+  
+  .sectionCard {
+    padding: 20px 15px;
+  }
+  
+  .listItem {
+    padding: 10px;
+    gap: 10px;
   }
 }

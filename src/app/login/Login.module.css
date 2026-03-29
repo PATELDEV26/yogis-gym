@@ -232,10 +232,44 @@
 
 @media (max-width: 600px) {
   .card {
-    padding: 40px 25px;
+    padding: 30px 20px;
+    border-radius: 30px;
   }
   
   .header h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  .header p {
+    margin-bottom: 25px;
+    font-size: 0.9rem;
+  }
+  
+  .iconCircle {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
+  }
+  
+  .backHome {
+    top: 20px;
+    left: 20px;
+    font-size: 0.8rem;
+  }
+  
+  .bgBlob1, .bgBlob2 {
+    width: 250px;
+    height: 250px;
+    filter: blur(60px);
+  }
+}
+
+@media (max-height: 700px) {
+  .loginContainer {
+    padding: 20px;
+    align-items: flex-start;
+  }
+  .card {
+    margin-top: 40px;
   }
 }

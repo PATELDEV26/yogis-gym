@@ -140,19 +140,24 @@
 
 @media (max-width: 1200px) {
   .sidebar {
-    width: 80px;
-    padding: 20px 10px;
+    width: 70px;
+    padding: 30px 10px;
   }
   
   .logo {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     margin-bottom: 40px;
     text-align: center;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   
   .navItem, .navItemActive {
     justify-content: center;
-    padding: 15px 0;
+    padding: 12px;
+    gap: 0;
   }
   
   .navItem span, .navItemActive span, .info, .viewSite span, .logoutBtn span {
@@ -161,5 +166,21 @@
   
   .viewSite, .logoutBtn {
     justify-content: center;
+    padding: 12px 0;
+  }
+  
+  .avatar {
+    margin: 0 auto;
+  }
+  
+  .footer {
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    width: 60px;
+    padding: 20px 5px;
   }
 }

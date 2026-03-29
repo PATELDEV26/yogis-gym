@@ -167,10 +167,12 @@
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr;
+    gap: 40px;
   }
   
   .grid > :last-child {
     grid-column: span 1;
+    max-width: none;
   }
   
   .title {
@@ -179,5 +181,23 @@
   
   .price {
     font-size: 4rem;
+  }
+  
+  .card {
+    padding: 50px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .planName {
+    font-size: 1.5rem;
+  }
+  
+  .price {
+    font-size: 3.5rem;
   }
 }

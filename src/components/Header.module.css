@@ -110,14 +110,85 @@
   background-color: var(--color-black);
 }
 
-/* Responsive adjustments */
+/* Mobile Navigation */
 @media (max-width: 900px) {
+  .header {
+    background-color: transparent;
+    padding: 20px 0;
+  }
+  
+  .header.scrolled {
+    background-color: var(--color-white);
+  }
+
   .nav {
-    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: var(--color-black);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    z-index: 1001;
+    display: flex; /* Override display: none */
+    padding: 40px;
+  }
+
+  .navOpen {
+    right: 0;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .navLink {
+    font-size: 1.5rem;
+    color: var(--color-white);
+  }
+
+  .loginBtn {
+    width: 100%;
+    text-align: center;
+    background-color: var(--color-peach);
+    color: var(--color-black);
+    display: none; /* Keep it hidden in header by default, see below */
+  }
+
+  .navOpen .loginBtn {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .menuToggle {
+    position: relative;
+    z-index: 1002;
+    display: flex !important;
+  }
+
+  .active .line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    background-color: var(--color-white);
+  }
+
+  .active .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .active .line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    background-color: var(--color-white);
   }
 }
+
 @media (max-width: 600px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+  
   .loginBtn {
-    display: none;
+    display: none; /* Hide in header on very small screens */
   }
 }
