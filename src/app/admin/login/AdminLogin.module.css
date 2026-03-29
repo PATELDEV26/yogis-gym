@@ -1,0 +1,165 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0c0c0c;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+  font-family: var(--font-jakarta);
+}
+
+.backHome {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  font-weight: 800;
+  color: #666;
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  z-index: 10;
+  transition: color 0.3s ease;
+}
+
+.backHome:hover {
+  color: white;
+}
+
+.loginCard {
+  background-color: #1a1a1a;
+  width: 100%;
+  max-width: 440px;
+  padding: 60px 50px;
+  border-radius: 30px;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  position: relative;
+  z-index: 5;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.iconCircle {
+  width: 80px;
+  height: 80px;
+  background-color: var(--color-peach);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 30px;
+  transform: rotate(45deg);
+}
+
+.iconCircle > svg {
+  transform: rotate(-45deg);
+  color: var(--color-black);
+}
+
+.header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.header p {
+  color: #666;
+  margin-bottom: 40px;
+  font-size: 0.9rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  text-align: left;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inputGroup label {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.inputGroup input {
+  padding: 18px;
+  background-color: #111;
+  border: 1px solid #222;
+  border-radius: 12px;
+  font-size: 1rem;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.inputGroup input:focus {
+  outline: none;
+  border-color: var(--color-peach);
+  background-color: #0a0a0a;
+}
+
+.submitBtn {
+  margin-top: 20px;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  padding: 20px;
+  border: none;
+  border-radius: 15px;
+  font-weight: 900;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.submitBtn:hover {
+  background-color: var(--color-peach);
+  transform: translateY(-2px);
+}
+
+.submitBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.securityNotice {
+  margin-top: 40px;
+  font-size: 0.75rem;
+  color: #444;
+  line-height: 1.5;
+  border-top: 1px solid #222;
+  padding-top: 20px;
+}
+
+.bgGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(234, 216, 206, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+  z-index: 1;
+}
+
+@media (max-width: 600px) {
+  .loginCard {
+    padding: 40px 25px;
+  }
+}

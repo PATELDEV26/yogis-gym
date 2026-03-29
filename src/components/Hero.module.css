@@ -1,0 +1,138 @@
+.hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: var(--color-white);
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.content {
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.title {
+  font-size: clamp(4rem, 15vw, 12rem);
+  line-height: 0.9;
+  letter-spacing: -4px;
+  margin-bottom: 40px;
+}
+
+.heroActions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.primaryBtn, .secondaryBtn {
+  padding: 18px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.primaryBtn {
+  background-color: var(--color-peach);
+  color: var(--color-black);
+}
+
+.primaryBtn:hover {
+  background-color: var(--color-white);
+  transform: translateY(-5px);
+}
+
+.secondaryBtn {
+  background-color: transparent;
+  color: var(--color-white);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.secondaryBtn:hover {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  transform: translateY(-5px);
+}
+
+.outline {
+  -webkit-text-stroke: 1px var(--color-white);
+  color: transparent;
+}
+
+.hashtag {
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+  opacity: 0.7;
+}
+
+.rotatingBadge {
+  position: absolute;
+  right: 80px;
+  bottom: 80px;
+  width: 150px;
+  height: 150px;
+}
+
+.badgeText {
+  fill: var(--color-white);
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+
+.scrollLine {
+  width: 1px;
+  height: 60px;
+  background-color: var(--color-white);
+}

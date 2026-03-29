@@ -1,0 +1,240 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titleInfo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.iconCircle {
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-peach);
+  color: black;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+
+.header p {
+  color: #666;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.saveBtn {
+  background-color: var(--color-peach);
+  border: none;
+  color: black;
+  padding: 12px 25px;
+  border-radius: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.saveBtn:hover {
+  background-color: white;
+  transform: translateY(-2px);
+}
+
+.settingsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.settingSection {
+  background-color: #111;
+  padding: 30px;
+  border-radius: 24px;
+  border: 1px solid #222;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 5px;
+}
+
+.icon {
+  color: var(--color-peach);
+}
+
+.sectionHeader h3 {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-weight: 800;
+  flex: 1;
+}
+
+.miniBtn {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  color: #888;
+  padding: 6px 12px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.inputGroup, .inputGroupFull {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputGroupFull {
+  grid-column: span 2;
+}
+
+.inputGroup label, .inputGroupFull label {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.inputGroup input, .inputGroupFull input {
+  background-color: #1a1a1a;
+  border: 1px solid #222;
+  border-radius: 10px;
+  padding: 12px 15px;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.inputGroup input:focus, .inputGroupFull input:focus {
+  outline: none;
+  border-color: var(--color-peach);
+}
+
+.planList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.planItem {
+  background-color: #1a1a1a;
+  padding: 15px 20px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.planInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.planInfo strong {
+  font-size: 1rem;
+  color: white;
+}
+
+.planInfo span {
+  font-size: 0.8rem;
+  color: var(--color-peach);
+  font-weight: 800;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.iconBtn {
+  width: 32px;
+  height: 32px;
+  background-color: #222;
+  border: none;
+  color: #666;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconBtn:hover {
+  background-color: #333;
+  color: white;
+}
+
+.announcementArea {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.announcementArea textarea {
+  background-color: #1a1a1a;
+  border: 1px solid #222;
+  border-radius: 15px;
+  padding: 20px;
+  color: white;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  resize: none;
+}
+
+.announcementArea textarea:focus {
+  outline: none;
+  border-color: var(--color-peach);
+}
+
+.note {
+  font-size: 0.75rem;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-style: italic;
+}
+
+@media (max-width: 1024px) {
+  .settingsGrid {
+    grid-template-columns: 1fr;
+  }
+}

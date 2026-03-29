@@ -1,0 +1,214 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titleInfo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.iconCircle {
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-peach);
+  color: black;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+
+.header p {
+  color: #666;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.addBtn {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 12px 25px;
+  border-radius: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.addBtn:hover {
+  background-color: var(--color-peach);
+  transform: translateY(-2px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.trainerCard {
+  background-color: #111;
+  padding: 30px;
+  border-radius: 24px;
+  border: 1px solid #222;
+  transition: all 0.3s ease;
+}
+
+.trainerCard:hover {
+  border-color: var(--color-peach);
+  transform: translateY(-5px);
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.trainerAvatar {
+  width: 60px;
+  height: 60px;
+  background-color: #222;
+  color: var(--color-peach);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+.rating {
+  background-color: rgba(234, 216, 206, 0.1);
+  color: var(--color-peach);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.trainerDetails h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.specialty {
+  color: #666;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.stats {
+  display: flex;
+  gap: 20px;
+  padding-top: 25px;
+  border-top: 1px solid #222;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat strong {
+  font-size: 1.2rem;
+  font-family: var(--font-primary);
+}
+
+.stat span {
+  font-size: 0.75rem;
+  color: #555;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.cardActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.editBtn {
+  flex: 1;
+  background-color: transparent;
+  border: 1px solid #333;
+  color: #888;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.deleteBtn {
+  background-color: rgba(255, 77, 77, 0.05);
+  border: 1px solid rgba(255, 77, 77, 0.1);
+  color: #FF4D4D;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.emptyContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.emptyIcon {
+  color: #222;
+  margin-bottom: 30px;
+}
+
+.emptyContainer h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.emptyContainer p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}

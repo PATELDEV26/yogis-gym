@@ -1,0 +1,154 @@
+.topNav {
+  height: 80px;
+  background-color: #111;
+  border-bottom: 1px solid #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  position: sticky;
+  top: 0;
+  z-index: 90;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.navLinks {
+  display: flex;
+  gap: 30px;
+}
+
+.link {
+  text-decoration: none;
+  font-weight: 700;
+  color: #888;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.link:hover {
+  color: white;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.searchBar {
+  background-color: #1a1a1a;
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 300px;
+  color: #666;
+}
+
+.searchBar input {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.searchBar input:focus {
+  outline: none;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.notification {
+  position: relative;
+  color: #888;
+  cursor: pointer;
+}
+
+.notification:hover {
+  color: white;
+}
+
+.count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #FF4D4D;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 900;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.adminBadge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #1a1a1a;
+  padding: 8px 15px;
+  border-radius: 50px;
+  border: 1px solid #333;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  background-color: var(--color-peach);
+  color: black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  font-size: 0.8rem;
+}
+
+.badgeInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.email {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: white;
+}
+
+.role {
+  font-size: 0.7rem;
+  color: #888;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 1200px) {
+  .navLinks {
+    display: none;
+  }
+  
+  .searchBar {
+    width: 200px;
+  }
+}
+@media (max-width: 768px) {
+  .searchBar {
+    display: none;
+  }
+}

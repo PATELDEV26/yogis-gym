@@ -1,0 +1,42 @@
+.gallery {
+  padding: 120px 0;
+  background-color: var(--color-white);
+}
+
+.header {
+  margin-bottom: 60px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.imageItem {
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.imageItem:hover .img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,85 @@
+.footer {
+  background-color: var(--color-white);
+  padding: 100px 0 40px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.logo {
+  font-family: var(--font-primary);
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 900;
+}
+
+.logo span {
+  color: var(--color-grey);
+}
+
+.footer p {
+  color: var(--color-grey);
+  letter-spacing: 1px;
+}
+
+.link {
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-black);
+  text-decoration: none;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social a {
+  color: var(--color-black);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.bottom {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.adminLink {
+  color: #333;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 0.75rem;
+  transition: color 0.3s ease;
+}
+
+.adminLink:hover {
+  color: var(--color-peach);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .social {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+}

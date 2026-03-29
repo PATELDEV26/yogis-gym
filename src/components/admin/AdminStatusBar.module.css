@@ -1,0 +1,58 @@
+.statusBar {
+  height: 40px;
+  background-color: #111;
+  border-top: 1px solid #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  font-size: 0.75rem;
+  color: #666;
+  font-weight: 600;
+  position: sticky;
+  bottom: 0;
+  z-index: 90;
+}
+
+.left, .right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.studioName {
+  letter-spacing: 1px;
+  font-weight: 800;
+}
+
+.icon {
+  color: #444;
+}
+
+.statusOnline {
+  color: #4ADE80;
+  display: inline-flex;
+  align-items: center;
+}
+
+.statusOnline::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: #4ADE80;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+@media (max-width: 768px) {
+  .right {
+    display: none;
+  }
+}

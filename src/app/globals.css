@@ -1,0 +1,53 @@
+:root {
+  --color-peach: #EAD8CE;
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-grey: #666666;
+  --font-primary: var(--font-outfit), sans-serif;
+  --font-secondary: var(--font-jakarta), sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-secondary);
+  background-color: var(--color-white);
+  color: var(--color-black);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-primary);
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+section {
+  padding: 120px 0;
+}
+
+.bg-peach {
+  background-color: var(--color-peach);
+}
+
+/* Base reveal class for Framer Motion or JS */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,0 +1,70 @@
+.container {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  pointer-events: none;
+}
+
+.toast {
+  pointer-events: auto;
+  min-width: 320px;
+  max-width: 450px;
+  padding: 18px 25px;
+  border-radius: 15px;
+  background-color: #1a1a1a;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  font-family: var(--font-jakarta);
+}
+
+.success {
+  border-left: 4px solid #4ADE80;
+}
+
+.success .icon {
+  color: #4ADE80;
+}
+
+.error {
+  border-left: 4px solid #FF4D4D;
+}
+
+.error .icon {
+  color: #FF4D4D;
+}
+
+.info {
+  border-left: 4px solid var(--color-peach);
+}
+
+.info .icon {
+  color: var(--color-peach);
+}
+
+.message {
+  flex: 1;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.closeBtn {
+  background: transparent;
+  border: none;
+  color: #444;
+  cursor: pointer;
+  padding: 5px;
+  transition: color 0.3s ease;
+}
+
+.closeBtn:hover {
+  color: white;
+}
