@@ -84,7 +84,7 @@ const Contact: React.FC = () => {
                 <Mail size={24} className={styles.infoIcon} />
                 <div>
                   <h4>EMAIL US</h4>
-                  <p>hello@zenithfitness.com</p>
+                  <p>hello@yogigym.com</p>
                 </div>
               </div>
               <div className={styles.infoItem}>

@@ -9,18 +9,27 @@ import { useRouter } from 'next/navigation';
 
 const AdminLoginPage: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const [email, setEmail] = useState('admin@yogigym.com');
+  const [password, setPassword] = useState('admin123');
+  const [error, setError] = useState('');
   const router = useRouter();
 
   const handleAdminAuth = (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
+    setError('');
     
-    // Simulate admin auth
+    // Simulate admin auth with specific credentials
     setTimeout(() => {
-      localStorage.setItem('isAdmin', 'true');
-      localStorage.setItem('role', 'admin');
-      localStorage.setItem('adminEmail', 'admin@zenithfitness.com');
-      router.push('/admin/dashboard');
+      if (email === 'admin@yogigym.com' && password === 'admin123') {
+        localStorage.setItem('isAdmin', 'true');
+        localStorage.setItem('role', 'admin');
+        localStorage.setItem('adminEmail', email);
+        router.push('/admin/dashboard');
+      } else {
+        setError('Invalid admin credentials. Please use the sample credentials provided.');
+        setIsLoading(false);
+      }
     }, 1500);
   };
 
@@ -45,15 +54,35 @@ const AdminLoginPage: React.FC = () => {
           <p>Secure system access for studio management</p>
         </div>
 
+        <div className={styles.credentialsBox}>
+          <p><strong>Sample Credentials:</strong></p>
+          <p>Email: admin@yogigym.com</p>
+          <p>Password: admin123</p>
+        </div>
+
         <form className={styles.form} onSubmit={handleAdminAuth}>
+          {error && <div className={styles.errorText}>{error}</div>}
+          
           <div className={styles.inputGroup}>
             <label><Mail size={16} /> Admin Email</label>
-            <input type="email" placeholder="admin@zenithfitness.com" defaultValue="admin@zenithfitness.com" required />
+            <input 
+              type="email" 
+              placeholder="admin@yogigym.com" 
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required 
+            />
           </div>
           
           <div className={styles.inputGroup}>
             <label><Lock size={16} /> Secure Password</label>
-            <input type="password" placeholder="••••••••" defaultValue="password" required />
+            <input 
+              type="password" 
+              placeholder="••••••••" 
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required 
+            />
           </div>
 
           <button type="submit" className={styles.submitBtn} disabled={isLoading}>

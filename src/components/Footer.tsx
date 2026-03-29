@@ -12,7 +12,7 @@ export default function Footer() {
           </div>
           <div className={styles.contact}>
             <a href="tel:+1234567890" className={styles.link}>+1 234 567 8900</a><br />
-            <a href="mailto:hello@zenithfitness.com" className={styles.link}>HELLO@ZENITHFITNESS.COM</a>
+            <a href="mailto:hello@yogigym.com" className={styles.link}>HELLO@YOGIGYM.COM</a>
           </div>
           <div className={styles.social}>
             <Link href="#">@ZENITHFITNESS</Link>

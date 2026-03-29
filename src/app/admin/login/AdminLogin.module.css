@@ -158,6 +158,41 @@
   z-index: 1;
 }
 
+.credentialsBox {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.credentialsBox p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #aaa;
+  font-family: monospace;
+}
+
+.credentialsBox strong {
+  color: var(--color-peach);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+}
+
+.errorText {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: #ff4d4d;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  border: 1px solid rgba(255, 0, 0, 0.2);
+  text-align: center;
+}
+
 @media (max-width: 600px) {
   .loginCard {
     padding: 40px 25px;

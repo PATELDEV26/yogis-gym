@@ -10,16 +10,31 @@ import { useRouter } from 'next/navigation';
 const LoginPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'signin' | 'signup'>('signin');
   const [isLoading, setIsLoading] = useState(false);
+  const [email, setEmail] = useState('user@yogigym.com');
+  const [password, setPassword] = useState('user123');
+  const [error, setError] = useState('');
   const router = useRouter();
 
   const handleAuth = (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
+    setError('');
     
-    // Simulate auth
+    // Simulate auth with specific credentials
     setTimeout(() => {
-      localStorage.setItem('isLoggedIn', 'true');
-      router.push('/dashboard');
+      if (activeTab === 'signin') {
+        if (email === 'user@yogigym.com' && password === 'user123') {
+          localStorage.setItem('isLoggedIn', 'true');
+          router.push('/dashboard');
+        } else {
+          setError('Invalid credentials. Please use the sample credentials provided.');
+          setIsLoading(false);
+        }
+      } else {
+        // Sign up simulation
+        localStorage.setItem('isLoggedIn', 'true');
+        router.push('/dashboard');
+      }
     }, 1500);
   };
 
@@ -44,6 +59,12 @@ const LoginPage: React.FC = () => {
           <p>Your transformation begins here.</p>
         </div>
 
+        <div className={styles.credentialsBox}>
+          <p><strong>Sample Account:</strong></p>
+          <p>Email: user@yogigym.com</p>
+          <p>Password: user123</p>
+        </div>
+
         <div className={styles.tabs}>
           <button 
             className={`${styles.tab} ${activeTab === 'signin' ? styles.activeTab : ''}`}
@@ -60,6 +81,8 @@ const LoginPage: React.FC = () => {
         </div>
 
         <form className={styles.form} onSubmit={handleAuth}>
+          {error && <div className={styles.errorText}>{error}</div>}
+          
           <AnimatePresence mode="wait">
             {activeTab === 'signup' && (
               <motion.div 
@@ -77,12 +100,24 @@ const LoginPage: React.FC = () => {
 
           <div className={styles.inputGroup}>
             <label>Email Address</label>
-            <input type="email" placeholder="john@example.com" required />
+            <input 
+              type="email" 
+              placeholder="user@yogigym.com" 
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required 
+            />
           </div>
           
           <div className={styles.inputGroup}>
             <label>Password</label>
-            <input type="password" placeholder="••••••••" required />
+            <input 
+              type="password" 
+              placeholder="••••••••" 
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required 
+            />
           </div>
 
           <button type="submit" className={styles.submitBtn} disabled={isLoading}>

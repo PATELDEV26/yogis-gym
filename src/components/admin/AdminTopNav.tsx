@@ -69,7 +69,7 @@ const AdminTopNav: React.FC = () => {
           <div className={styles.adminBadge} onClick={handleProfileClick} style={{ cursor: 'pointer' }}>
             <div className={styles.avatar}>A</div>
             <div className={styles.badgeInfo}>
-              <div className={styles.email}>admin@zenithfitness.com</div>
+              <div className={styles.email}>admin@yogigym.com</div>
               <div className={styles.role}>Administrator</div>
             </div>
           </div>

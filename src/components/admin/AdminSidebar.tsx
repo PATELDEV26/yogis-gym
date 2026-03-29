@@ -63,7 +63,7 @@ const AdminSidebar: React.FC = () => {
         <div className={styles.adminProfile}>
           <div className={styles.avatar}>A</div>
           <div className={styles.info}>
-            <div className={styles.email}>admin@zenithfitness.com</div>
+            <div className={styles.email}>admin@yogigym.com</div>
             <div className={styles.badge}>Administrator</div>
           </div>
         </div>
